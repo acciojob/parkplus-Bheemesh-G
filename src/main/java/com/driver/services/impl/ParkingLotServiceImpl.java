@@ -36,11 +36,11 @@ public class ParkingLotServiceImpl implements ParkingLotService {
 
         ParkingLot parkingLot = parkingLotRepository1.findById(parkingLotId).get();
         Spot spot = new Spot();
-        if(numberOfWheels==2)
+        if(numberOfWheels>0 || numberOfWheels<=2)
         {
             spot.setSpotType(SpotType.TWO_WHEELER);
         }
-        else if(numberOfWheels==4)
+        else if(numberOfWheels>=3 || numberOfWheels<=4)
         {
             spot.setSpotType(SpotType.FOUR_WHEELER);
         }
