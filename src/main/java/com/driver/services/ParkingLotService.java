@@ -1,6 +1,10 @@
 package com.driver.services;
 
-public interface ParkingLotService {
+import com.driver.model.ParkingLot;
+import com.driver.model.Spot;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ParkingLotService  {
     
     void deleteSpot(int spotId);
 
